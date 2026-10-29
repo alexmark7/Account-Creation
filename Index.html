@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Account Creation</title>
+    <link rel="stylesheet" href="CSS-style/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="imageContainer">
+        <img src="IMG/via.png" alt="Billede af indgangen til VIA" />
+        <h2>
+          <span
+            >Velkommen til VIA. I anledning af, at studerende på 1. semester skal
+            aflevere deres første projekt, inviterer vi jer til fest på VIA.
+            Tilmeld jer ved at udfylde formlen hurtigst muligt! Det bliver helt sikkert en
+            god fest!</span
+          >
+        </h2>
+      </div>
+
+      <div class="right">
+        <h1>Join us at VIA</h1>
+
+        <form action="registratrion form" method="post">
+          <fieldset class="personalInformation">
+            <legend>Personal information</legend>
+            <div>
+              <label for="name">Full Name </label>
+              <input
+                autofocus
+                id="name"
+                type="text"
+                placeholder="John Doe"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="countryCode">Country code</label>
+              <input
+                id="countryCode"
+                name="countryCode"
+                type="tel"
+                autocomplete="tel-country-code"
+                aria-describedby="countryCodeHint"
+                placeholder="+45"
+                pattern="\+?[0-9]{2}"
+                title="Enter a two-digit country code, such as +45 or 45."
+                required
+              />
+              <small id="countryCodeHint" class="field-hint">Enter a two-digit country code, such as +45 or 45.</small>
+              <small class="field-error">Please enter a two-digit country code, such as +45 or 45.</small>
+            </div>
+
+            <div>
+              <label for="PhoneNumber">Phone number</label>
+              <input
+                id="PhoneNumber"
+                name="phone"
+                type="tel"
+                inputmode="numeric"
+                autocomplete="tel-national"
+                aria-describedby="phoneHint"
+                pattern="[0-9]{8}"
+                title="Enter exactly 8 digits, without spaces or the country code."
+                placeholder="12345678"
+                required
+              />
+              <small id="phoneHint" class="field-hint">Enter exactly 8 digits, without spaces or the country code.</small>
+              <small class="field-error">Please enter exactly 8 digits, without spaces or the country code.</small>
+            </div>
+
+            <div>
+              <label for="email">Email address </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                aria-describedby="emailHint"
+                pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                title="Enter an email address such as ada@example.com."
+                placeholder="ada@example.com"
+                required
+              />
+              <small id="emailHint" class="field-hint">Use an email address such as ada@example.com.</small>
+              <small id="emailError" class="field-error">Please enter an email address such as ada@example.com.</small>
+            </div>
+
+            <div>
+              <label for="companyOrOrganization"
+                >Company or organization
+              </label>
+              <input id="companyOrOrganization" placeholder="VIA Engineering" />
+            </div>
+
+            <div>
+              <label for="role">Your role </label>
+              <select
+                name="role"
+                id="role"
+                placeholder="Designer, Founder, Student..."
+                required
+              >
+                <option value="" selected disabled>Select a role</option>
+                <option value="Designer">Designer</option>
+                <option value="founder">Founder</option>
+                <option value="student">Student</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="extra">Anything we should know?</label>
+              <br />
+              <textarea
+                id="extra"
+                rows="4"
+                cols="40"
+                placeholder="Dietary or accessibility requirements"
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="pass">
+            <legend>Choose your pass</legend>
+            <input type="radio" id="FDP" name="pass" value="Full Day Pass"required />
+            <label for="FDP">Full-day pass</label><br />
+
+            <input type="radio" id="TalksOnly" name="pass" value="Talks Only"required />
+            <label for="TalksOnly">Talks only</label><br />
+             
+          </fieldset>
+
+          <fieldset class="updates">
+            <div>
+              <input type="checkbox" />
+              <label for="updates"
+                >Send me occasional updates about future Field Notes gatherings.
+                You can unsubscribe at any time.</label
+              >
+            </div>
+          </fieldset>
+
+          <fieldset class="completeRegistration">
+            <div>
+              <button type="submit">Complete registration</button>
+            </div>
+          </fieldset>
+
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <h2>2026 Account Creation | Educational Project</h2>
+    </footer>
+  </body>
+</html>
