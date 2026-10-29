@@ -125,6 +125,10 @@ textarea {
 }
 
 .right textarea {
+  min-height: 120px;
+  border: 1px solid var(--outline);
+  border-radius: 8px;
+  background: var(--surface);
   resize: vertical;
 }
 
